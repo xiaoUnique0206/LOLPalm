@@ -15,6 +15,6 @@
 #import "MoreCollectionViewController.h"
 #import "VideoCollectionViewController.h"
 #import "DataRequestTool.h"
-
+#import "VideoItem.h"
 
 #endif

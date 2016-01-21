@@ -42,6 +42,7 @@
 		C2FDA0691C50B83E0064BCF3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FDA0491C50B83E0064BCF3 /* UIImageView+WebCache.m */; };
 		C2FDA06A1C50B83E0064BCF3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FDA04B1C50B83E0064BCF3 /* UIView+WebCacheOperation.m */; };
 		DF0DD9C81C50CDA600964E98 /* DataRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD9C71C50CDA600964E98 /* DataRequestTool.m */; };
+		DF0DD9CB1C50EBF700964E98 /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD9CA1C50EBF700964E98 /* VideoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,8 @@
 		C2FDA04B1C50B83E0064BCF3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		DF0DD9C61C50CDA600964E98 /* DataRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestTool.h; sourceTree = "<group>"; };
 		DF0DD9C71C50CDA600964E98 /* DataRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestTool.m; sourceTree = "<group>"; };
+		DF0DD9C91C50EBF700964E98 /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoItem.h; path = LOLPalm/Source/BaseClass/VideoItem.h; sourceTree = SOURCE_ROOT; };
+		DF0DD9CA1C50EBF700964E98 /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoItem.m; path = LOLPalm/Source/BaseClass/VideoItem.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +364,8 @@
 		C2FDA0151C50B83E0064BCF3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF0DD9C91C50EBF700964E98 /* VideoItem.h */,
+				DF0DD9CA1C50EBF700964E98 /* VideoItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				C2FDA05F1C50B83E0064BCF3 /* SDWebImageDecoder.m in Sources */,
 				C2FDA0691C50B83E0064BCF3 /* UIImageView+WebCache.m in Sources */,
 				C2FDA0501C50B83E0064BCF3 /* InformationTableViewController.m in Sources */,
+				DF0DD9CB1C50EBF700964E98 /* VideoItem.m in Sources */,
 				C2FDA0611C50B83E0064BCF3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C2FDA0621C50B83E0064BCF3 /* SDWebImageManager.m in Sources */,
 				DF0DD9C81C50CDA600964E98 /* DataRequestTool.m in Sources */,

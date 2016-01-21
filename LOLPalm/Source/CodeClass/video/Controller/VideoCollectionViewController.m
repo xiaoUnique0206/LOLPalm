@@ -10,6 +10,9 @@
 
 @interface VideoCollectionViewController ()
 
+@property(strong,nonatomic)NSArray *cateArr;
+@property(strong,nonatomic)NSArray *dataArr;
+
 @end
 
 @implementation VideoCollectionViewController
@@ -24,19 +27,67 @@ static NSString * const reuseIdentifier = @"Cell";
         self.navigationItem.title = @"视频";
         self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"视频" image:[UIImage imageNamed:@"iconfont-ordinaryvideo"] tag:1001];
         self.tabBarController.tabBar.tintColor = [UIColor blueColor];
+        self.cateArr = [NSArray array];
         [self loadData];
-        NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
-        NSLog(@"time time:%lf",time);
-        int hou = time - 1453366800;
-        NSLog(@"hou %d",hou);
-        
     }
     return self;
 }
 
 - (void)loadData
 {
-//    [DataRequestTool shareData] getDataWithURL:<#(NSString *)#> andBlock:<#^(NSData *data)block#>
+//    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:VideoUpdateTime_URL]];
+//    NSError *error = nil;
+//    NSDictionary *timeList = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+//    if (error)
+//    {
+//        NSLog(@"timeList error: %@",error);
+//    }
+//    else
+//    {
+//        NSArray *dataArr = [timeList objectForKey:@"data"];
+//        NSMutableArray *timeArr = [NSMutableArray array];
+//        for (NSDictionary *subDict in dataArr)
+//        {
+//            NSDictionary *nDict = [[NSDictionary alloc] init];
+//            [nDict setValue:[subDict objectForKey:@"updated"] forKey:[subDict objectForKey:@"id"]];
+//            [timeArr addObject:nDict];
+//        }
+//        
+//    }
+        [[DataRequestTool shareData] getDataWithURL:VideoLog_URL andBlock:^(NSData *data) {
+            NSError *dataError = nil;
+            NSDictionary *logDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&dataError];
+            if (dataError)
+            {
+                NSLog(@"data request error:%@",dataError);
+            }
+            else
+            {
+               NSArray *mainArr = [logDict objectForKey:@"data"];
+                NSMutableArray *cateArr = [NSMutableArray array];
+                NSMutableArray *dataArr = [NSMutableArray array];
+                for (NSDictionary *sDict in mainArr)
+                {
+                    VideoCate *cate = [[VideoCate alloc] init];
+                    [cate setValuesForKeysWithDictionary:sDict];
+                    [cateArr addObject:cate];
+                    NSLog(@"cate:%@",cate);
+                    NSArray *itemArr = [sDict objectForKey:@"catword_id"];
+                    NSMutableArray *itemsArr = [NSMutableArray array];
+                    for (NSDictionary *subDict in itemArr)
+                    {
+                        VideoItem *item = [[VideoItem alloc] init];
+                        [item setValuesForKeysWithDictionary:subDict];
+                        NSLog(@"item:%@",item);
+                        [itemsArr addObject:item];
+                    }
+                    NSArray *subDataArr = itemsArr;
+                    [dataArr addObject:subDataArr];
+                }
+                self.dataArr = dataArr;
+                self.cateArr = cateArr;
+                }
+        }];
 }
 
 - (void)viewDidLoad {
