@@ -12,6 +12,7 @@
 		6A05E7D71C507BCD009CEFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E7D61C507BCD009CEFDE /* Assets.xcassets */; };
 		6A05E7DA1C507BCD009CEFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A05E7D81C507BCD009CEFDE /* LaunchScreen.storyboard */; };
 		C2FDA04C1C50B83E0064BCF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD9FF41C50B83E0064BCF3 /* AppDelegate.m */; };
+		C2FDA04D1C50B83E0064BCF3 /* zhanwei2.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD9FF71C50B83E0064BCF3 /* zhanwei2.m */; };
 		C2FDA04E1C50B83E0064BCF3 /* CommunityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD9FFC1C50B83E0064BCF3 /* CommunityTableViewController.m */; };
 		C2FDA04F1C50B83E0064BCF3 /* HeroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FDA0021C50B83E0064BCF3 /* HeroTableViewController.m */; };
 		C2FDA0501C50B83E0064BCF3 /* InformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FDA0081C50B83E0064BCF3 /* InformationTableViewController.m */; };
@@ -43,6 +44,7 @@
 		C2FDA06A1C50B83E0064BCF3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FDA04B1C50B83E0064BCF3 /* UIView+WebCacheOperation.m */; };
 		DF0DD9C81C50CDA600964E98 /* DataRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD9C71C50CDA600964E98 /* DataRequestTool.m */; };
 		DF0DD9CB1C50EBF700964E98 /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD9CA1C50EBF700964E98 /* VideoItem.m */; };
+		DF0DD9CE1C50FF0500964E98 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD9CD1C50FF0500964E98 /* VideoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		DF0DD9C71C50CDA600964E98 /* DataRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestTool.m; sourceTree = "<group>"; };
 		DF0DD9C91C50EBF700964E98 /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoItem.h; path = LOLPalm/Source/BaseClass/VideoItem.h; sourceTree = SOURCE_ROOT; };
 		DF0DD9CA1C50EBF700964E98 /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoItem.m; path = LOLPalm/Source/BaseClass/VideoItem.m; sourceTree = SOURCE_ROOT; };
+		DF0DD9CC1C50FF0500964E98 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoCell.h; path = LOLPalm/Source/BaseClass/VideoCell.h; sourceTree = SOURCE_ROOT; };
+		DF0DD9CD1C50FF0500964E98 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoCell.m; path = LOLPalm/Source/BaseClass/VideoCell.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +377,8 @@
 		C2FDA0161C50B83E0064BCF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF0DD9CC1C50FF0500964E98 /* VideoCell.h */,
+				DF0DD9CD1C50FF0500964E98 /* VideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FDA0681C50B83E0064BCF3 /* UIImageView+HighlightedWebCache.m in Sources */,
+				DF0DD9CE1C50FF0500964E98 /* VideoCell.m in Sources */,
 				C2FDA05F1C50B83E0064BCF3 /* SDWebImageDecoder.m in Sources */,
 				C2FDA0691C50B83E0064BCF3 /* UIImageView+WebCache.m in Sources */,
 				C2FDA0501C50B83E0064BCF3 /* InformationTableViewController.m in Sources */,
@@ -564,6 +571,7 @@
 				C2FDA04E1C50B83E0064BCF3 /* CommunityTableViewController.m in Sources */,
 				C2FDA0521C50B83E0064BCF3 /* VideoCollectionViewController.m in Sources */,
 				C2FDA0641C50B83E0064BCF3 /* UIButton+WebCache.m in Sources */,
+				C2FDA04D1C50B83E0064BCF3 /* zhanwei2.m in Sources */,
 				C2FDA05D1C50B83E0064BCF3 /* SDImageCache.m in Sources */,
 				C2FDA04F1C50B83E0064BCF3 /* HeroTableViewController.m in Sources */,
 				C2FDA0531C50B83E0064BCF3 /* zhanwei.m in Sources */,

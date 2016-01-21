@@ -26,9 +26,17 @@
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:videoTVC];
 
     HeroTableViewController *heroTVC = [[HeroTableViewController alloc]init];
+
+    UICollectionViewFlowLayout *flowLayout1 = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout1.itemSize = CGSizeMake(130, 180);
+
+    InformationCollectionViewController *informationTVC = [[InformationCollectionViewController alloc]initWithCollectionViewLayout:flowLayout1];
+    
+
     UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:heroTVC];
     
-    InformationTableViewController *informationTVC = [[InformationTableViewController alloc]init];
+
+    
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:informationTVC];
     
     UICollectionViewFlowLayout *flowLayoutA = [[UICollectionViewFlowLayout alloc] init];
