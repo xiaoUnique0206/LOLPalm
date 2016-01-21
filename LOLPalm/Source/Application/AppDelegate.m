@@ -20,7 +20,7 @@
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:communityTVC];
     HeroTableViewController *heroTVC = [[HeroTableViewController alloc]init];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:heroTVC];
-    InformationTableViewController *informationTVC = [[InformationTableViewController alloc]init];
+    InformationCollectionViewController *informationTVC = [[InformationCollectionViewController alloc]init];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:informationTVC];
     MoreCollectionViewController *moreTVC = [[MoreCollectionViewController alloc]init];
     UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:moreTVC];

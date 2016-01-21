@@ -1,5 +1,5 @@
 //
-//  InformationTableViewController.h
+//  InformationCollectionViewController.h
 //  LOLPalm
 //
 //  Created by 宋庆亮 on 16/1/21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InformationTableViewController : UITableViewController
+@interface InformationCollectionViewController : UICollectionViewController
 
 @end

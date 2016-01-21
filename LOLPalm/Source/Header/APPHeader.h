@@ -11,9 +11,9 @@
 
 #import "CommunityTableViewController.h"
 #import "HeroTableViewController.h"
-#import "InformationTableViewController.h"
+#import "InformationCollectionViewController.h"
 #import "MoreCollectionViewController.h"
 #import "VideoCollectionViewController.h"
-
-
+#import "InformationCollectionViewCell.h"
+#import "Information.h"
 #endif

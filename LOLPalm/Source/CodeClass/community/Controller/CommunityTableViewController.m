@@ -18,8 +18,6 @@
     if (self = [super initWithStyle:style]) {
         self.navigationItem.title = @"新闻资讯";
         self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"资讯" image:[UIImage imageNamed:@"iconfont-zixun"] tag:1001];
-       
- 
     }
     return self;
 }
