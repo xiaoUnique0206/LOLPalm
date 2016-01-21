@@ -16,7 +16,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    CommunityTableViewController *communityTVC = [[CommunityTableViewController alloc]init];
+    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:communityTVC];
+    HeroTableViewController *heroTVC = [[HeroTableViewController alloc]init];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:heroTVC];
+    InformationTableViewController *informationTVC = [[InformationTableViewController alloc]init];
+    UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:informationTVC];
+    MoreCollectionViewController *moreTVC = [[MoreCollectionViewController alloc]init];
+    UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:moreTVC];
+    VideoCollectionViewController *videoTVC = [[VideoCollectionViewController alloc]init];
+    UINavigationController *nav5 = [[UINavigationController alloc]initWithRootViewController:videoTVC];
+    NSArray *array = @[nav1,nav4,nav3,nav2,nav5];
+    UITabBarController *tabBar = [UITabBarController new];
+    tabBar.viewControllers = array;
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = tabBar;
+    tabBar.tabBar.barTintColor = [UIColor blackColor];
     return YES;
 }
 
