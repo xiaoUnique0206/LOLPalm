@@ -16,23 +16,35 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+-(instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout
+{
+    self = [super initWithCollectionViewLayout:layout];
+    if (self)
+    {
+        self.navigationItem.title = @"视频";
+        self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"视频" image:[UIImage imageNamed:@"iconfont-ordinaryvideo"] tag:1001];
         self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-        self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
-        self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
+        [self loadData];
+        NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+        NSLog(@"time time:%lf",time);
+        int hou = time - 1453366800;
+        NSLog(@"hou %d",hou);
+        
     }
     return self;
 }
 
+- (void)loadData
+{
+//    [DataRequestTool shareData] getDataWithURL:<#(NSString *)#> andBlock:<#^(NSData *data)block#>
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
     
-    self.navigationItem.title = @"视频";
-    self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"视频" image:[UIImage imageNamed:@"iconfont-ordinaryvideo"] tag:1001];
-    self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-    self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
+    self.collectionView.backgroundColor = [UIColor cyanColor];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.

@@ -16,26 +16,25 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout{
+    if (self = [super initWithCollectionViewLayout:layout]) {
         self.navigationItem.title = @"英雄";
         self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"英雄" image:[UIImage imageNamed:@"iconfont-zixun"] tag:1001];
         self.tabBarController.tabBar.tintColor = [UIColor blueColor];
         self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
         self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-        self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
-        self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
     }
     return self;
 }
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
+    self.collectionView.backgroundColor = [UIColor cyanColor];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     // Do any additional setup after loading the view.
 }
@@ -59,13 +58,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 
-    return 1;
+    return 0;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 10;
+    return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

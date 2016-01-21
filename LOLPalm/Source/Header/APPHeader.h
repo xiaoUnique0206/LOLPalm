@@ -16,4 +16,7 @@
 #import "VideoCollectionViewController.h"
 #import "InformationCollectionViewCell.h"
 #import "Information.h"
+#import "DataRequestTool.h"
+
+
 #endif
