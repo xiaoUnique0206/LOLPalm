@@ -16,17 +16,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     CommunityTableViewController *communityTVC = [[CommunityTableViewController alloc]init];
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:communityTVC];
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(130, 180);
+    VideoCollectionViewController *videoTVC = [[VideoCollectionViewController alloc]initWithCollectionViewLayout:flowLayout];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:videoTVC];
+
     HeroTableViewController *heroTVC = [[HeroTableViewController alloc]init];
-    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:heroTVC];
+    UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:heroTVC];
+    
     InformationTableViewController *informationTVC = [[InformationTableViewController alloc]init];
     UINavigationController *nav3 = [[UINavigationController alloc]initWithRootViewController:informationTVC];
-    MoreCollectionViewController *moreTVC = [[MoreCollectionViewController alloc]init];
-    UINavigationController *nav4 = [[UINavigationController alloc]initWithRootViewController:moreTVC];
-    VideoCollectionViewController *videoTVC = [[VideoCollectionViewController alloc]init];
-    UINavigationController *nav5 = [[UINavigationController alloc]initWithRootViewController:videoTVC];
-    NSArray *array = @[nav1,nav4,nav3,nav2,nav5];
+    
+    UICollectionViewFlowLayout *flowLayoutA = [[UICollectionViewFlowLayout alloc] init];
+    MoreCollectionViewController *moreTVC = [[MoreCollectionViewController alloc]initWithCollectionViewLayout:flowLayoutA];
+    UINavigationController *nav5 = [[UINavigationController alloc]initWithRootViewController:moreTVC];
+    
+           NSArray *array = @[nav1,nav2,nav3,nav4,nav5];
     UITabBarController *tabBar = [UITabBarController new];
     tabBar.viewControllers = array;
     

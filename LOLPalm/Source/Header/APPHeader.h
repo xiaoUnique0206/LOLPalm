@@ -14,6 +14,7 @@
 #import "InformationTableViewController.h"
 #import "MoreCollectionViewController.h"
 #import "VideoCollectionViewController.h"
+#import "DataRequestTool.h"
 
 
 #endif

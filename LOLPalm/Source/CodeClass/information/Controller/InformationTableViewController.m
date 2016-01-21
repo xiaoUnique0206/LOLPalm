@@ -18,8 +18,8 @@
     if (self = [super initWithStyle:style]) {
         self.navigationItem.title = @"英雄";
         self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"英雄" image:[UIImage imageNamed:@"iconfont-zixun"] tag:1001];
-        self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-        self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
+//        self.tabBarController.tabBar.tintColor = [UIColor blueColor];
+//        self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.tabBar.tintColor = [UIColor blueColor];
+//    self.tabBarController.tabBar.tintColor = [UIColor blueColor];
     self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
 }
