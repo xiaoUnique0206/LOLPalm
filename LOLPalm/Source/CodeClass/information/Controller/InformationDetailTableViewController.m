@@ -1,35 +1,24 @@
 //
-//  InformationTableViewController.m
+//  InformationDetailTableViewController.m
 //  LOLPalm
 //
-//  Created by 宋庆亮 on 16/1/21.
+//  Created by 宋庆亮 on 16/1/22.
 //  Copyright © 2016年 宋庆亮. All rights reserved.
 //
 
-#import "InformationTableViewController.h"
+#import "InformationDetailTableViewController.h"
 
-@interface InformationTableViewController ()
+@interface InformationDetailTableViewController ()
 
 @end
 
-@implementation InformationTableViewController
-
-- (instancetype)initWithStyle:(UITableViewStyle)style{
-    if (self = [super initWithStyle:style]) {
-        self.navigationItem.title = @"英雄";
-        self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"英雄" image:[UIImage imageNamed:@"iconfont-zixun"] tag:1001];
-//        self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-//        self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
-    }
-    return self;
-}
-
+@implementation InformationDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-    self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
-    self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

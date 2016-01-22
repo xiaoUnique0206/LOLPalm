@@ -17,11 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    CommunityTableViewController *communityTVC = [[CommunityTableViewController alloc]init];
+    CommunityViewController *communityTVC = [[CommunityViewController alloc]init];
     UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:communityTVC];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(130, 180);
+    flowLayout.sectionInset = UIEdgeInsetsMake(Gap, Gap, Gap, Gap);
+    flowLayout.itemSize = CGSizeMake((W-6*Gap)/3, (H-206)/3);
     VideoCollectionViewController *videoTVC = [[VideoCollectionViewController alloc]initWithCollectionViewLayout:flowLayout];
     UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:videoTVC];
 
@@ -29,6 +30,7 @@
 
     UICollectionViewFlowLayout *flowLayout1 = [[UICollectionViewFlowLayout alloc] init];
     flowLayout1.itemSize = CGSizeMake(130, 180);
+    flowLayout1.sectionInset = UIEdgeInsetsMake(20, 20, 20, 30);
 
     InformationCollectionViewController *informationTVC = [[InformationCollectionViewController alloc]initWithCollectionViewLayout:flowLayout1];
     
@@ -52,6 +54,7 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = tabBar;
     tabBar.tabBar.barTintColor = [UIColor blackColor];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     return YES;
 }
 

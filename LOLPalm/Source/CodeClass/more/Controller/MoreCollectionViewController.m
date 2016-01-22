@@ -16,8 +16,10 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout{
+    if (self = [super initWithCollectionViewLayout:layout]) {
+        self.navigationItem.title = @"更多";
+        self.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"更多" image:[UIImage imageNamed:@"iconfont-gengduo-2"] tag:1001];
         self.tabBarController.tabBar.tintColor = [UIColor blueColor];
         self.navigationController.navigationBar.barTintColor =[UIColor blackColor];
         self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
@@ -25,13 +27,15 @@ static NSString * const reuseIdentifier = @"Cell";
     return self;
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
+
+    
+    
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.

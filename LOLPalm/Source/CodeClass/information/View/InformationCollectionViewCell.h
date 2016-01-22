@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Information.h"
 @interface InformationCollectionViewCell : UICollectionViewCell
 
 
@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *goldLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;
-
+@property(nonatomic,strong)Information *infor;
 
 @end

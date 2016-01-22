@@ -9,5 +9,7 @@
 #import "Information.h"
 
 @implementation Information
-
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    
+}
 @end

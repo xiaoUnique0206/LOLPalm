@@ -10,6 +10,9 @@
 
 @interface VideoCell : UICollectionViewCell
 
+@property(strong,nonatomic)UIImageView *imgView;
+@property(strong,nonatomic)UILabel *titleLab;
+@property(strong,nonatomic)VideoItem *item;
 
 
 @end

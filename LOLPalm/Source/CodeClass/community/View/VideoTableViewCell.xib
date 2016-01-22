@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="VideoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mW9-wA-Vwy">
+                        <rect key="frame" x="10" y="8" width="54" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mW9-wA-Vwy" secondAttribute="height" multiplier="1:1" id="bVB-72-ycD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpu-wq-eyL">
+                        <rect key="frame" x="74" y="8" width="244" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="bgz-fV-idJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2w-xq-RGd">
+                        <rect key="frame" x="74" y="33" width="244" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="Elx-3A-kd4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08a-TP-dnh">
+                        <rect key="frame" x="289" y="50" width="29" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xr0-6t-WqA">
+                        <rect key="frame" x="27" y="24" width="21" height="22"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="08a-TP-dnh" firstAttribute="top" secondItem="j2w-xq-RGd" secondAttribute="bottom" constant="5" id="1sD-nd-0YC"/>
+                    <constraint firstItem="Xr0-6t-WqA" firstAttribute="centerX" secondItem="mW9-wA-Vwy" secondAttribute="centerX" id="2fi-aO-IMt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="08a-TP-dnh" secondAttribute="bottom" id="38c-pn-C4l"/>
+                    <constraint firstItem="mW9-wA-Vwy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="C0j-e0-T7X"/>
+                    <constraint firstItem="Xr0-6t-WqA" firstAttribute="centerY" secondItem="mW9-wA-Vwy" secondAttribute="centerY" id="H7f-rq-a5G"/>
+                    <constraint firstItem="j2w-xq-RGd" firstAttribute="leading" secondItem="mW9-wA-Vwy" secondAttribute="trailing" constant="10" id="HFu-84-ml2"/>
+                    <constraint firstItem="Xr0-6t-WqA" firstAttribute="width" secondItem="mW9-wA-Vwy" secondAttribute="width" multiplier="0.4" id="KKK-kW-sUC"/>
+                    <constraint firstItem="gpu-wq-eyL" firstAttribute="leading" secondItem="mW9-wA-Vwy" secondAttribute="trailing" constant="10" id="Ku8-5D-Guy"/>
+                    <constraint firstItem="mW9-wA-Vwy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ric-aH-b9j"/>
+                    <constraint firstItem="j2w-xq-RGd" firstAttribute="top" secondItem="gpu-wq-eyL" secondAttribute="bottom" constant="5" id="VjA-oc-ERU"/>
+                    <constraint firstAttribute="trailing" secondItem="gpu-wq-eyL" secondAttribute="trailing" constant="10" id="XVp-ct-G0o"/>
+                    <constraint firstItem="gpu-wq-eyL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZoG-t2-DW1"/>
+                    <constraint firstAttribute="trailing" secondItem="j2w-xq-RGd" secondAttribute="trailing" constant="10" id="td6-I6-AZl"/>
+                    <constraint firstAttribute="trailing" secondItem="08a-TP-dnh" secondAttribute="trailing" constant="10" id="z9s-dv-DrF"/>
+                    <constraint firstItem="Xr0-6t-WqA" firstAttribute="height" secondItem="mW9-wA-Vwy" secondAttribute="height" multiplier="0.4" id="zwi-5R-Kpm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mW9-wA-Vwy" secondAttribute="bottom" constant="8" id="LsG-8I-KaP"/>
+            </constraints>
+            <connections>
+                <outlet property="descLabel" destination="j2w-xq-RGd" id="fCd-fr-hlX"/>
+                <outlet property="picImgView" destination="mW9-wA-Vwy" id="YC6-Gk-fJ0"/>
+                <outlet property="timeLabel" destination="08a-TP-dnh" id="mWZ-Zh-xDX"/>
+                <outlet property="titleLabel" destination="gpu-wq-eyL" id="8Hd-xL-a7j"/>
+            </connections>
+            <point key="canvasLocation" x="468" y="337"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play.png" width="64" height="64"/>
+    </resources>
+</document>

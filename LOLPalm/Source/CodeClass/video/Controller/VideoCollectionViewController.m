@@ -78,7 +78,6 @@ static NSString * const reuseIdentifier = @"Cell";
                     {
                         VideoItem *item = [[VideoItem alloc] init];
                         [item setValuesForKeysWithDictionary:subDict];
-                        NSLog(@"item:%@",item);
                         [itemsArr addObject:item];
                     }
                     NSArray *subDataArr = itemsArr;
@@ -95,8 +94,8 @@ static NSString * const reuseIdentifier = @"Cell";
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
     
-    self.collectionView.backgroundColor = [UIColor cyanColor];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    self.collectionView.backgroundColor = [UIColor cyanColor];
+    [self.collectionView registerClass:[VideoCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -118,22 +117,32 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDataSource>
 
+//- (CGSize)collectionView:(UICollectionView *) collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
+//{
+//
+//    return CGSizeMake(120, 100);
+//}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+//#warning Incomplete implementation, return the number of sections
+    NSLog(@"section:%ld",self.dataArr.count);
+    return self.dataArr.count;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+//#warning Incomplete implementation, return the number of items
+
+    return [self.dataArr[section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    VideoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    
+    VideoItem *item = [[VideoItem alloc] init];
+    item = self.dataArr[indexPath.section][indexPath.row];
+    cell.item = item;
     return cell;
 }
 
@@ -167,5 +176,17 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TlevelUITableViewController *tltvc = [[TlevelUITableViewController alloc] init];
+    VideoItem *item = [[VideoItem alloc] init];
+    item = self.dataArr[indexPath.section][indexPath.row];
+    tltvc.item = item;
+    VideoCate *cate = [[VideoCate alloc] init];
+    cate = self.cateArr[indexPath.section];
+    tltvc.cateID = cate.Id;
+    [self.navigationController pushViewController:tltvc animated:YES];
+}
 
 @end
